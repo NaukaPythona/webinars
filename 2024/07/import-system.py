@@ -1,4 +1,6 @@
-#!./present -S Intro
+#!./present Intro Modularity Strategies
+
+from __future__ import annotations
 
 from manim import *
 from manim_slides import Slide
@@ -13,23 +15,33 @@ with lazy_importing():
 
 class Intro(Slide):
     def construct(self) -> None:
-        text = Text(
+        title = theme.title(
             "Jak działają importy w Pythonie?",
-            font=theme.FONT,
+            place=UP,
             color=theme.BRIGHT_PYTHON_BLUE,
         )
-
-        underline = Line(color=theme.DARKER_PYTHON_BLUE)
-        underline.stretch_to_fit_width(text.width)
-        underline.next_to(text, direction=DOWN)
-
-        self.play(
-            GrowFromCenter(text),
-            GrowFromCenter(underline),
-        )
+        underline = theme.underline(title)
+        self.play(theme.title_anim(title, underline))
 
         self.next_slide()
 
+        logotype = theme.logotype()
+        logotype.next_to(underline, direction=DOWN * 2)
+        self.play(FadeIn(logotype))
+
+        self.next_slide()
+
+
+class Modularity(Slide):
+    def construct(self) -> None:
+        self.play(theme.title_anim("1. Problem modularności"))
+        self.next_slide()
+
+
+class Strategies(Slide):
+    def construct(self) -> None:
+        self.play(theme.title_anim("2. Importery"))
+        self.next_slide()
 
 
 if __name__ == "__main__":

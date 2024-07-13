@@ -23,4 +23,4 @@ dev-dependencies = [
 ]
 
 [tool.ruff.lint]
-ignore = ["F403", "F405"]
+ignore = ["F403", "F405", "TCH002"]

@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-PYTHONPATH=$(dirname $0) manim ${@: -1} && manim-slides ${@:1:$#-1}
+set -euxo pipefail
+FILENAME=${@: -1}
+ARGS=${@:1:$#-1}
+PYTHONPATH=$(dirname $0) manim $FILENAME ${ARGS[@]} && manim-slides ${ARGS[@]}
