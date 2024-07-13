@@ -11,6 +11,8 @@
 
 annotated-types==0.7.0
     # via pydantic
+asttokens==2.4.1
+    # via devtools
 av==12.2.0
     # via manim-slides
 certifi==2024.7.4
@@ -28,6 +30,9 @@ cloup==3.0.5
     # via manim
 decorator==5.1.1
     # via manim
+devtools==0.12.2
+executing==2.0.1
+    # via devtools
 glcontext==2.5.0
     # via moderngl
 idna==3.7
@@ -66,10 +71,12 @@ numpy==1.26.4
     # via manim-slides
     # via mapbox-earcut
     # via moderngl-window
+    # via pandas
     # via pyrr
     # via scipy
 packaging==24.1
     # via qtpy
+pandas==2.2.2
 pillow==10.4.0
     # via manim
     # via manim-slides
@@ -89,6 +96,7 @@ pydub==0.25.1
 pyglet==2.0.16
     # via moderngl-window
 pygments==2.18.0
+    # via devtools
     # via manim
     # via rich
 pyrr==0.10.3
@@ -99,8 +107,12 @@ pyside6-addons==6.5.2
 pyside6-essentials==6.5.2
     # via pyside6
     # via pyside6-addons
+python-dateutil==2.9.0.post0
+    # via pandas
 python-pptx==0.6.23
     # via manim-slides
+pytz==2024.1
+    # via pandas
 qtpy==2.4.1
     # via manim-slides
 requests==2.32.3
@@ -118,6 +130,9 @@ shiboken6==6.5.2
     # via pyside6
     # via pyside6-addons
     # via pyside6-essentials
+six==1.16.0
+    # via asttokens
+    # via python-dateutil
 skia-pathops==0.8.0.post1
     # via manim
 slothy==1.0.0
@@ -132,6 +147,8 @@ typing-extensions==4.12.2
     # via manim
     # via pydantic
     # via pydantic-core
+tzdata==2024.1
+    # via pandas
 urllib3==2.2.2
     # via requests
 watchdog==4.0.1

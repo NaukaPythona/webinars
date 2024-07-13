@@ -9,6 +9,8 @@ dependencies = [
     "pyside6==6.5.2",
     "manim>=0.18.1",
     "slothy>=1.0.0",
+    "devtools>=0.12.2",
+    "pandas>=2.2.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -20,6 +22,7 @@ virtual = true
 dev-dependencies = [
     "ruff>=0.5.1",
     "mypy>=1.10.1",
+    "ipython>=8.26.0",
 ]
 
 [tool.ruff.lint]

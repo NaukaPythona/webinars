@@ -35,22 +35,25 @@ def underline_anim(
     underline: manim.Line,
 ) -> manim.LaggedStart:
     return manim.LaggedStart(
-        manim.GrowFromCenter(mobject),
+        manim.Create(mobject),
         manim.GrowFromCenter(underline),
     )
 
 
 def title(
     content: str,
-    place: np.ndarray = manim.UP * 3,
+    place: np.ndarray | None = None,
     color: manim.ManimColor | None = None,
+    gradient: tuple[manim.ManimColor, manim.ManimColor] | None = None,
 ) -> manim.Text:
-    title = manim.Text(
-        content,
-        font=FONT,
-        color=color or DARK_PYTHON_BLUE,
+    color_kwargs = (
+        {"gradient": gradient} if gradient else {"color": color or DARK_PYTHON_BLUE}
     )
-    title.move_to(place)
+    title = manim.Text(content, font=FONT, **color_kwargs)
+    if place is not None:
+        title.move_to(place)
+    else:
+        title.align_on_border(manim.UP)
     return title
 
 
