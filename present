@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+PYTHONPATH=$(dirname $0) manim ${@: -1} && manim-slides ${@:1:$#-1}

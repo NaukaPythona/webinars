@@ -1,0 +1,26 @@
+[project]
+name = "webinars"
+description = "Add your description here"
+authors = [
+    { name = "bswck", email = "bartoszpiotrslawecki@gmail.com" }
+]
+dependencies = [
+    "manim-slides>=5.1.7",
+    "pyside6==6.5.2",
+    "manim>=0.18.1",
+    "slothy>=1.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+dynamic = ["version"]
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = [
+    "ruff>=0.5.1",
+    "mypy>=1.10.1",
+]
+
+[tool.ruff.lint]
+ignore = ["F403", "F405"]
